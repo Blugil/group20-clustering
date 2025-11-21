@@ -1,0 +1,23 @@
+# Python environment
+.venv/
+__pycache__/
+*.pyc
+
+# OS junk
+.DS_Store
+
+# Data generated
+#data/embed/
+#data/cluster/
+#data/analysis/
+data/csv/20news-raw.csv
+data/csv/20news-clean.csv
+data/csv/20news-label.csv
+
+# Model cache
+*.npy
+*.npz
+
+# Logs
+logs/
+*.log
