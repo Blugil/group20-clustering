@@ -15,8 +15,8 @@ data/csv/20news-clean.csv
 data/csv/20news-label.csv
 
 # Model cache
-*.npy
-*.npz
+#*.npy
+#*.npz
 
 # Logs
 logs/
