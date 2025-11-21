@@ -15,13 +15,25 @@ __pycache__/
 data/csv/20news-raw.csv
 data/csv/20news-clean.csv
 data/csv/20news-label.csv
+<<<<<<< HEAD
 data/json/*.json
 
 db/*.db
+=======
+data/embed/embed_bge-m3.npy
+data/embed/embed_3small.npy
+data/embed/embed_3large.npy
+>>>>>>> d6266c2 (Update .gitignore and include data.npy)
 
 # Model cache
 #*.npy
 #*.npz
+<<<<<<< HEAD
+=======
+
+# LibreOffice lock files
+.~lock.*#
+>>>>>>> d6266c2 (Update .gitignore and include data.npy)
 
 # Logs
 logs/
