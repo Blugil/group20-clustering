@@ -3,6 +3,8 @@
 __pycache__/
 *.pyc
 
+*.gz
+
 # OS junk
 .DS_Store
 
