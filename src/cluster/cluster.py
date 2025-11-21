@@ -31,7 +31,6 @@ ANALYSIS_COLUMNS = [
             "cluster_size_std", "cluster_size_entropy", "pca"
         ]
 
-
 # Hyperparameters
 K_MEANS_ClUSTERS = [6, 12, 20]
 HDB_MIN_CLUSTER_SIZE = [10, 20, 40, 60, 100]
@@ -193,6 +192,7 @@ def validate_read(np_embedding, labels_df, np_ids):
     # Sanity check nothing was shuffled and counts are correct
     df_ids = labels_df["id"].astype(str).values
     ids_str = np_ids.astype(str)
+
     if np_embedding.shape[0] != df_ids.shape[0]:
         raise ValueError("Row Mismatch between embeddings and labels_csv")
     if not np.array_equal(df_ids, ids_str):

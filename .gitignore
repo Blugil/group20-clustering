@@ -13,10 +13,16 @@ __pycache__/
 data/csv/20news-raw.csv
 data/csv/20news-clean.csv
 data/csv/20news-label.csv
+data/embed/embed_bge-m3.npy
+data/embed/embed_3small.npy
+data/embed/embed_3large.npy
 
 # Model cache
-*.npy
-*.npz
+#*.npy
+#*.npz
+
+# LibreOffice lock files
+.~lock.*#
 
 # Logs
 logs/
