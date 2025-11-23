@@ -3,6 +3,8 @@
 __pycache__/
 *.pyc
 
+*.gz
+
 # OS junk
 .DS_Store
 
@@ -13,6 +15,7 @@ __pycache__/
 data/csv/20news-raw.csv
 data/csv/20news-clean.csv
 data/csv/20news-label.csv
+data/json/*.json
 
 # Model cache
 #*.npy

@@ -1,0 +1,12 @@
+[project]
+name = "group20-clustering"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10.7"
+dependencies = [
+    "flask>=3.1.2",
+    "hdbscan>=0.8.40",
+    "matplotlib>=3.10.7",
+    "pacmap>=0.8.0",
+]

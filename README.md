@@ -2,7 +2,7 @@ Workflow
 
 1. src/preprocess/preprocess.py
     - Preprocesses the unzipped 20news-bydate.tar.gz dataset from http://qwone.com/~jason/20Newsgroups/ into a csv, optional cleaning flag required for classical embedders.
-    - Saves data into data/csv/20news-label.csv, 20news-raw.csv, and 20news-clean.csv. 
+    - Saves data into data/csv/20news-label.csv, 20news-raw.csv, and 20news-clean.csv, must create the directory before running code.
 
 2. src/embed/embed.py
     - Embeds the preprocessed 20news-bydate dataset utilizing specific embedding algorithms into data/embed/embed_{algorithm}.npy and data/embed/ids_{algorithm}.npy
