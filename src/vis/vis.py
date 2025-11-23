@@ -34,7 +34,7 @@ def plot(embeddings_2d, clusters):
 
 
 
-def tsne():
+def tsne(dimension=3):
     #TODO: temporary imports, real vis work will involve creating a tsne or pacmap output for every cluster combo 
     ROOT = Path(__file__).resolve().parents[2]
     DATA_DIR = ROOT / "data"
@@ -62,7 +62,7 @@ def tsne():
 
         embeddings = np.load(EMBED_DIR / file)
         tsne = TSNE(
-            n_components=2,
+            n_components=dimension,
             perplexity=50.0,   
             learning_rate=200.0,
             init="pca",
@@ -78,7 +78,7 @@ def tsne():
 
 
 
-def pmap():
+def pmap(dimension=3):
     #TODO: temporary imports, real vis work will involve creating a tsne or pacmap output for every cluster combo 
     ROOT = Path(__file__).resolve().parents[2]
     DATA_DIR = ROOT / "data"
@@ -108,7 +108,7 @@ def pmap():
 
     # testing pacmap visualization
         pmap = pacmap.PaCMAP(
-            n_components=2, 
+            n_components=3, 
             n_neighbors=10, 
             MN_ratio=0.5, 
             FP_ratio=2.0,
