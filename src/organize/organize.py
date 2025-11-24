@@ -1,8 +1,32 @@
-import argparse
 import json
 from pathlib import Path
 from datetime import datetime, timezone
+import pandas as pd
 import numpy as np
+
+
+def create_analysis_json() -> None:
+
+    ROOT = Path(__file__).resolve().parents[2]
+    DATA_DIR = ROOT / "data"
+    ANALYSIS_DIR = DATA_DIR / "analysis"
+    JSON_DIR = DATA_DIR / "json"
+
+    analysis_df = pd.read_csv(Path.joinpath(ANALYSIS_DIR, "analysis.csv"))
+
+    
+    algorithms = analysis_df["algorithm"]
+    print(algorithms.array)
+
+
+    analysis_dict = {
+        record["algorithm"]: record
+        for record in analysis_df.to_dict(orient="records")
+    }
+
+    with open(Path.joinpath(JSON_DIR, "analysis.json"), "w", encoding="utf-8") as f:
+        json.dump(analysis_dict, f, ensure_ascii=False)
+
 
 
 def export_vis_json() -> None:
@@ -142,4 +166,5 @@ def export_vis_json() -> None:
 
 
 if __name__ == "__main__":
-    export_vis_json()
+    # export_vis_json()
+    create_analysis_json()
