@@ -8,7 +8,6 @@ def get_db(name: str = "newsgroups.db"):
 
     DB_DIR = Path(__file__).resolve().parents[1] / "db"
     DB_PATH = DB_DIR / name
-    print(DB_PATH)
 
     if "db" not in g:
         g.db = sqlite3.connect(DB_PATH)
@@ -47,8 +46,6 @@ def get_analysis_json():
 
     file_path = Path.joinpath(JSON_DIR, f"analysis.json")
 
-    print(file_path)
-
     if not file_path.exists():
         return jsonify({"status": "test2"}), 404
 
@@ -67,8 +64,6 @@ def get_vis_json(vis: str, embedding: str, cluster: str, hyperparam: str):
     JSON_DIR = DATA_DIR / "json"
 
     file_path = Path.joinpath(JSON_DIR, f"{vis}_{cluster}_{hyperparam}_{embedding}.json")
-
-    print(file_path)
 
     if not file_path.exists():
         return jsonify({"status": "test2"}), 404
