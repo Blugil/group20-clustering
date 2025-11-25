@@ -17,6 +17,8 @@ data/csv/20news-clean.csv
 data/csv/20news-label.csv
 data/json/*.json
 
+db/*.db
+
 # Model cache
 #*.npy
 #*.npz
