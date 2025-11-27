@@ -166,5 +166,5 @@ def export_vis_json() -> None:
 
 
 if __name__ == "__main__":
-    # export_vis_json()
     create_analysis_json()
+    export_vis_json()

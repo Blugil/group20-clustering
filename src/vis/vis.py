@@ -108,7 +108,7 @@ def pmap(dimension=3):
 
     # testing pacmap visualization
         pmap = pacmap.PaCMAP(
-            n_components=3, 
+            n_components=dimension, 
             n_neighbors=10, 
             MN_ratio=0.5, 
             FP_ratio=2.0,
