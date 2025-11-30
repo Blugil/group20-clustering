@@ -18,10 +18,11 @@ def create_analysis_json() -> None:
     algorithms = analysis_df["algorithm"]
     print(algorithms.array)
 
+    df_clean = analysis_df.dropna(subset=["algorithm"]).replace({float('nan'): None})
 
     analysis_dict = {
         record["algorithm"]: record
-        for record in analysis_df.to_dict(orient="records")
+        for record in df_clean.to_dict(orient="records")
     }
 
     with open(Path.joinpath(JSON_DIR, "analysis.json"), "w", encoding="utf-8") as f:
@@ -167,4 +168,4 @@ def export_vis_json() -> None:
 
 if __name__ == "__main__":
     create_analysis_json()
-    export_vis_json()
+    # export_vis_json()
