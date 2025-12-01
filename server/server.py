@@ -1,6 +1,7 @@
 from flask import Flask, jsonify, Blueprint
 from pathlib import Path
 from routes import api_bp
+from flask_cors import CORS
 import json
 
 
@@ -11,6 +12,10 @@ def create_app() -> Flask:
         JSON_AS_ASCII=False,
     )
 
+    CORS(
+        app,
+        resources={r"/api/*": {"origins": ["http://localhost:3000"]}},
+    )
 
     # Register blueprints
     app.register_blueprint(api_bp, url_prefix="/api")

@@ -32,3 +32,7 @@ data/embed/embed_3large.npy
 # Logs
 logs/
 *.log
+
+
+# Frontend related git ignores
+frontend/node_modules

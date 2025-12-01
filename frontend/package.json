@@ -1,0 +1,11 @@
+{
+  "name": "embedding-visualizer",
+  "version": "1.0.0",
+  "description": "3D Embedding Visualization Tool",
+  "scripts": {
+    "generate-data": "node scripts/generate-data.js"
+  },
+  "dependencies": {
+    "react": "^19.2.0"
+  }
+}
