@@ -14,7 +14,7 @@ def create_app() -> Flask:
 
     CORS(
         app,
-        resources={r"/api/*": {"origins": ["http://localhost:3000"]}},
+        resources={r"/api/*": {"origins": "*"}},
     )
 
     # Register blueprints
