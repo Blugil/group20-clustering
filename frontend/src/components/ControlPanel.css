@@ -1,0 +1,82 @@
+.control-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.control-panel h2 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #FFC627;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.control-group label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #cccccc;
+}
+
+.control-group select {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #444444;
+  border-radius: 4px;
+  background-color: #2a2a2a;
+  color: #f5f5f5;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.control-group select:hover:not(:disabled) {
+  border-color: #8C1D40;
+}
+
+.control-group select:focus {
+  outline: none;
+  border-color: #FFC627;
+  box-shadow: 0 0 0 2px rgba(255, 198, 39, 0.2);
+}
+
+.control-group select:disabled {
+  background-color: #1a1a1a;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.load-button {
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0a0a0a;
+  background-color: #FFC627;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 8px;
+}
+
+.load-button:hover:not(:disabled) {
+  background-color: #e6b023;
+}
+
+.load-button:active:not(:disabled) {
+  background-color: #cc9a1f;
+}
+
+.load-button:disabled {
+  background-color: #444444;
+  color: #888888;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+

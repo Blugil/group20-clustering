@@ -41,19 +41,6 @@ def export_vis_json() -> None:
     JSON_DIR = DATA_DIR / "json"
 
 
-    # THIS WHOLE SECTION WILL BE REFACTORED FOR REPEATABILITY
-    #TODO: this should load each set of vis coordinates into some structure 
-    #(noteably there are two rn, two per embedding)
-    coords = np.load(VIS_DIR / "tsne_minilm.npy")
-    
-    #TODO: this should load each set of ID's for each embedding (one per embedding)
-    ids = np.load(EMBED_DIR / "ids_minilm.npy", allow_pickle=True)
-
-    #TODO: load the clusters in a meaningful way
-    clusters = np.load(CLUSTER_DIR / "kmeans_minilm_k6.npy", allow_pickle=True)
-
-
-
     vis_dict = {}
     vis_files = [f.name for f in (VIS_DIR).iterdir() if f.is_file()]
 
